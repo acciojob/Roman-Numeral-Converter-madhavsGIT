@@ -1,5 +1,5 @@
 function convertToRoman(num) {
-  	const obj = {
+  	const romanNumerals = [
         ['M', 1000], 
         ['CM', 900], 
         ['D', 500], 
@@ -13,13 +13,13 @@ function convertToRoman(num) {
         ['V', 5], 
         ['IV', 4], 
         ['I', 1]
-    };
+    ];
 
   //your code here
 	let res = '';
 
-	for(let i = 0; i < obj.length; i++) {
-		const [symbol, value] = obj[i];
+	for(let i = 0; i < romanNumerals.length; i++) {
+		const [symbol, value] = romanNumerals[i];
 
 		while(num >= value) {
 			res = res + symbol;
